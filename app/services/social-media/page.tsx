@@ -75,7 +75,7 @@ export default function SocialMedia() {
                             <h1 className="text-4xl md:text-5xl font-bold mb-6">Social Media Management</h1>
                             <p className="text-lg leading-relaxed">
                                 Strategic social media planning, content creation, and engagement management 
-                                to build and maintain your brand's online presence.
+                                to build and maintain your brand&apos;s online presence.
                             </p>
                         </div>
                         <div className="w-full md:w-1/2">

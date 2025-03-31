@@ -69,7 +69,7 @@ export default function Portfolio() {
                     Our Portfolio
                 </h1>
                 <p className="text-xl text-gray-700 text-center mb-12 max-w-3xl mx-auto">
-                    Explore our successful projects and see how we've helped businesses 
+                    Explore our successful projects and see how we&apos;ve helped businesses 
                     transform their digital presence and operational efficiency.
                 </p>
 
