@@ -46,7 +46,7 @@ export default function About() {
                         </div>
                         <div className="w-full md:w-1/2">
                             <p className="text-lg text-justify leading-relaxed">
-                                Founded in the year 2000, as BlueScreen Technologies, BlueScreen Consulting began its journey as a pioneer in web design, crafting creative solutions for businesses in a rapidly evolving digital landscape. Over the years, we've grown far beyond our roots, expanding to offer a comprehensive range of IT services tailored to the needs of companies and organizations of any size.
+                                Founded in the year 2000, as BlueScreen Technologies, BlueScreen Consulting began its journey as a pioneer in web design, crafting creative solutions for businesses in a rapidly evolving digital landscape. Over the years, we&apos;ve grown far beyond our roots, expanding to offer a comprehensive range of IT services tailored to the needs of companies and organizations of any size.
                             </p>
                         </div>
                     </div>
@@ -93,7 +93,7 @@ export default function About() {
             <div className="py-20 bg-white">
                 <div className="max-w-3xl mx-auto px-4 text-center">
                     <p className="text-lg text-gray-700 mb-8">
-                        We believe in building lasting partnerships by delivering exceptional care, unmatched expertise, and customized solutions. Whether you're a small business seeking guidance or a large enterprise navigating complex IT infrastructures, our team is here to support and empower your success.
+                        We believe in building lasting partnerships by delivering exceptional care, unmatched expertise, and customized solutions. Whether you&apos;re a small business seeking guidance or a large enterprise navigating complex IT infrastructures, our team is here to support and empower your success.
                     </p>
                     <p className="text-2xl font-bold text-[#000756]">
                         Join us as we continue shaping the future of IT, together.
