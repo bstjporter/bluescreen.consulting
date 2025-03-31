@@ -1,0 +1,549 @@
+@import "tailwindcss";
+
+@source 'primereact/resources/themes/saga-blue/theme.css';
+
+:root {
+  font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+  text-align: center;
+  color-scheme: light;
+  color: #242424;
+  background-color: rgba(255, 255, 255, 0.87);
+}
+
+body {
+  margin: 0;
+    padding: 0;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+    }
+
+.logo {
+  height: 6em;
+  will-change: filter;
+  transition: filter 300ms;
+    }
+
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+    }
+
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+    }
+
+  to {
+    transform: rotate(360deg);
+    }
+    }
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+}
+}
+
+.card {
+  padding: 1rem;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+/* Menubar base styles */
+.p-menubar {
+    padding: 0 !important;
+    border: none !important;
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    z-index: 9999 !important;
+    margin: 0 !important;
+    height: 85px !important;
+    display: flex !important;
+    transition: all 0.7s ease-in-out !important;
+}
+
+/* Non-scrolled state */
+.nav-top .p-menubar {
+    background: transparent !important;
+}
+
+.nav-top .p-menubar .p-menuitem-text {
+    color: #000756 !important;
+    text-shadow: 0 1px 2px rgba(255, 255, 255, 0.8) !important;
+}
+
+/* Scrolled state */
+.nav-scrolled .p-menubar {
+    background: linear-gradient(to bottom, #000756 90%, rgba(255, 255, 255, 0.2)) !important;
+    transition: background 0.7s ease-in-out !important;
+}
+
+.nav-scrolled .p-menubar .p-menuitem-text {
+    color: white !important;
+    text-shadow: none !important;
+}
+
+/* Menu text styles */
+    .p-menubar .p-menubar-root-list > .p-menuitem > .p-menuitem-link {
+    padding: 0 1.5rem !important;
+    height: 120px !important;
+    display: flex;
+    align-items: center;
+    }
+
+.p-menubar .p-menubar-root-list > .p-menuitem > .p-menuitem-link .p-menuitem-text {
+    font-size: 1.125rem !important;
+    font-weight: 800 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.05em !important;
+    line-height: 120px !important;
+    transition: color 0.7s ease-in-out !important;
+}
+
+/* Mobile menu styles */
+@media screen and (max-width: 960px) {
+    .p-menubar-root-list[role="menubar"] {
+        flex-direction: column;
+    }
+    .p-menubar-root-list[role="menubar"] {
+        position: fixed !important;
+        top: 60px !important;
+        left: 0 !important;
+        width: 100% !important;
+        transform: none !important;
+        background: #000756 !important;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1) !important;
+        padding: 0.5rem 0 !important;
+        z-index: 9998 !important;
+}
+
+.p-menubar-button {
+        color: white !important;
+}
+
+    /* Mobile menu items */
+    .p-menubar .p-menubar-root-list > .p-menuitem > .p-menuitem-link .p-menuitem-text {
+        color: white !important;
+    }
+
+    /* Hamburger icon color */
+    .nav-scrolled .pi-bars:before {
+        color: white !important;
+    }
+
+    .nav-top .pi-bars:before {
+        color: #000756 !important;
+    }
+}
+
+/* Desktop menu centering */
+@media screen and (min-width: 961px) {
+    .p-menubar .p-menubar-root-list {
+        position: absolute !important;
+        left: 50% !important;
+        transform: translateX(-50%) !important;
+    display: flex;
+        justify-content: center;
+}
+}
+
+/* Logo container styles */
+.p-menubar-start {
+    height: 85px !important;
+    display: flex !important;
+    align-items: center !important;
+    padding: 0 !important;
+    flex: 0 0 auto !important;
+    margin-right: auto !important;
+}
+
+/* Button Animation */
+
+@keyframes bounce-slow {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes pulse-slow {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+}
+
+.group-hover\:animate-bounce-slow {
+    animation: none;
+}
+
+.group-hover\:animate-pulse-slow {
+    animation: none;
+}
+
+.group:hover .group-hover\:animate-bounce-slow {
+    animation: bounce-slow 2s infinite;
+}
+
+.group:hover .group-hover\:animate-pulse-slow {
+    animation: pulse-slow 2s infinite;
+}
+
+/* Orb Animation */
+.orb {
+    width: 10vw;
+    height: 10vw;
+    animation: moveAround 30s infinite linear, pulse 15s infinite ease-in-out;
+    will-change: transform, opacity;
+}
+    
+@keyframes moveAround {
+    0% {
+        transform: translate(0, 0);
+    }
+    25% {
+        transform: translate(
+            calc(20% * var(--orb-speed-x)),
+            calc(20% * var(--orb-speed-y))
+        );
+    }
+    50% {
+        transform: translate(
+            calc(-20% * var(--orb-speed-x)),
+            calc(20% * var(--orb-speed-y))
+        );
+}
+    75% {
+        transform: translate(
+            calc(20% * var(--orb-speed-x)),
+            calc(-20% * var(--orb-speed-y))
+        );
+    }
+    100% {
+        transform: translate(0, 0);
+    }
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+}
+
+/* Content Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-fadeIn {
+    animation: fadeIn 1s ease-out forwards;
+}
+
+.animation-delay-200 {
+    animation-delay: 200ms;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .orb {
+        width: 15vw;
+        height: 15vw;
+    }
+}
+
+/* Add these styles for the logo fade effect */
+.from-gray-50 {
+    --tw-gradient-from: rgb(249 250 251 / 1);
+    --tw-gradient-to: rgb(249 250 251 / 0);
+    --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+}
+
+.via-transparent {
+    --tw-gradient-to: transparent;
+    --tw-gradient-stops: var(--tw-gradient-from), transparent 35%, var(--tw-gradient-to);
+}
+
+.to-gray-50 {
+    --tw-gradient-to: rgb(249 250 251 / 1);
+}
+
+/* Add specific gradient control classes */
+.from-20\% {
+    --tw-gradient-from-position: 20%;
+}
+
+.via-35\% {
+    --tw-gradient-via-position: 35%;
+}
+
+.to-80\% {
+    --tw-gradient-to-position: 80%;
+}
+
+/* Update hero container styles */
+.hero-container {
+    width: 100vw;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+/* Card hover effect */
+@keyframes cardFloat {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+/* Service icon pulse effect */
+@keyframes iconPulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Add smooth scrolling for the whole page */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Service cards container */
+.service-cards-container {
+    perspective: 1000px;
+}
+
+/* Additional hover effects for cards */
+.service-card:hover {
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    transform: translateY(-8px);
+}
+
+/* Add these styles for the service icons */
+.pi {
+    font-size: initial;
+}
+
+section[class*="bg-[#000756]"] .pi {
+    font-size: 50px !important;
+    color: white !important;
+}
+
+/* Service icon container */
+.service-icon-container {
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Add these styles for mobile menu alignment */
+.p-menubar {
+    padding: 0 1rem !important;
+    border: none !important;
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    z-index: 9999 !important;
+    margin: 0 !important;
+    height: 120px !important;
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    padding: 0 2rem !important;
+}
+
+/* Mobile menu container alignment */
+    .p-menubar-button {
+        margin-left: auto !important;
+        padding: 0.5rem !important;
+    }
+    
+/* Ensure logo stays left */
+.p-menubar-start {
+    height: 85px !important;
+    display: flex !important;
+    align-items: center !important;
+    padding: 0 !important;
+    flex: 0 0 auto !important;
+    margin-right: auto !important;
+}
+
+/* Mobile menu layout */
+@media screen and (max-width: 960px) {
+    .p-menubar {
+        justify-content: space-between !important;
+}
+
+    .p-menubar-button {
+        margin-left: auto !important;
+        padding: 0.5rem !important;
+}
+
+    .p-menubar-root-list {
+        width: 100% !important;
+}
+
+    .p-menubar .p-menubar-root-list > .p-menuitem > .p-menuitem-link {
+        padding: 0 1.5rem !important;
+}
+}
+
+/* Add these styles for the Why Choose Us section */
+.why-choose-quote {
+    position: relative;
+}
+
+.why-choose-quote::before {
+    content: '"';
+    position: absolute;
+    left: -2rem;
+    top: -1rem;
+    font-size: 4rem;
+    color: #000756;
+    opacity: 0.1;
+}
+
+/* Footer styles */
+footer a {
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+footer a:hover {
+    opacity: 0.8;
+}
+
+/* Payment method icons container */
+.payment-icon {
+    filter: brightness(0) invert(1);
+    transition: all 0.3s ease;
+}
+
+.payment-icon:hover {
+    transform: translateY(-2px);
+}
+
+/* Update Get a Quote button styles */
+.quote-button {
+    font-size: 1.25rem !important;
+    font-weight: 700 !important;
+    padding: 0.75rem 1.5rem !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: 0.75rem !important;
+    white-space: nowrap !important;
+}
+
+/* Ensure icons stay inline with text */
+.quote-button img {
+    display: inline-block !important;
+    vertical-align: middle !important;
+}
+
+/* Add these styles for the dropdown menu */
+.p-menubar .p-menuitem-sub {
+    background: white !important;
+    border: 1px solid #e5e7eb !important;
+    border-radius: 0.5rem !important;
+    padding: 0.5rem 0 !important;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06) !important;
+}
+
+.p-menubar .p-submenu-list {
+    width: auto !important;
+    min-width: fit-content !important;
+    padding: 0.5rem 0 !important;
+    text-align: left !important;
+    left: 0 !important;
+    white-space: nowrap !important;
+}
+
+.p-menubar .p-submenu-list .p-menuitem {
+    width: 100% !important;
+}
+
+.p-menubar .p-submenu-list .p-menuitem-link {
+    padding: 0.75rem 1.5rem !important;
+    text-align: left !important;
+    justify-content: flex-start !important;
+}
+
+.p-menubar .p-submenu-list .p-menuitem-link .p-menuitem-text {
+    font-size: 1.125rem !important;
+    line-height: normal !important;
+    white-space: nowrap !important;
+    text-align: left !important;
+}
+
+.p-menubar .p-menuitem-sub {
+    transform: none !important;
+}
+
+.p-menubar .p-menuitem-sub {
+    transform: translateY(1rem) !important;
+}
+
+.p-menubar .p-menubar-root-list > .p-menuitem {
+    margin: 0 1rem !important;
+}
+
+.p-menubar .p-menubar-root-list > .p-menuitem > .p-menuitem-link:hover .p-menuitem-text {
+    opacity: 0.8 !important;
+}
+
+/* Update navigation container */
+.nav-container {
+    height: 120px !important;
+}
+
+.p-menubar-end {
+    flex: 0 0 auto !important;
+    margin-left: auto !important;
+}
+
+.p-menubar .p-menubar-root-list {
+    margin: 0 auto !important;
+    position: static !important;
+    transform: none !important;
+}
