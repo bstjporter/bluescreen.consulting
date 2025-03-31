@@ -8,7 +8,7 @@ export default function PrivacyPolicy() {
                 <section>
                     <h2 className="text-2xl font-semibold text-[#000756] mb-4">1. Introduction</h2>
                     <p>
-                        BlueScreen Consulting ("we," "our," or "us") respects your privacy and is committed to protecting your personal data. This privacy policy explains how we collect, use, and safeguard your information when you visit our website or use our services.
+                        BlueScreen Consulting (&quot;we,&quot; &quot;our,&quot; or &quot;us&quot;) respects your privacy and is committed to protecting your personal data. This privacy policy explains how we collect, use, and safeguard your information when you visit our website or use our services.
                     </p>
                 </section>
 

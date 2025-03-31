@@ -59,7 +59,7 @@ export default function About() {
                     <div className="bg-gradient-to-r from-[#000756] to-[#1DBA57] p-12 rounded-lg text-white text-center">
                         <h2 className="text-3xl font-bold mb-6">Our Mission</h2>
                         <p className="text-xl leading-relaxed max-w-3xl mx-auto">
-                            Based in the "Silicon Heartland" of Ohio, we are proud to call this innovative hub our home. Our mission has remained steadfast from the very beginning: to "future-proof" our clients. Staying ahead of trends and embracing emerging technologies, we ensure our customers are not only prepared for the challenges of today but also equipped to seize the opportunities of tomorrow.
+                            Based in the &quot;Silicon Heartland&quot; of Ohio, we are proud to call this innovative hub our home. Our mission has remained steadfast from the very beginning: to &quot;future-proof&quot; our clients. Staying ahead of trends and embracing emerging technologies, we ensure our customers are not only prepared for the challenges of today but also equipped to seize the opportunities of tomorrow.
                         </p>
                     </div>
                 </div>

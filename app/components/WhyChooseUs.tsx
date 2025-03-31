@@ -61,20 +61,20 @@ export default function WhyChooseUs() {
                             </h3>
                             <div className="space-y-4 text-lg text-justify text-gray-700">
                                 <p>
-                                    "When I founded BlueScreen Consulting, I had one mission in mind: to make 
+                                    &quot;When I founded BlueScreen Consulting, I had one mission in mind: to make 
                                     enterprise-level IT solutions accessible to businesses and organizations of 
                                     all sizes. Today, that mission continues to drive everything we do.
                                 </p>
                                 <p>
-                                    We've built our reputation on understanding not just technology, but the 
-                                    people who use it. Our team doesn't just implement solutions – we partner 
+                                    We&apos;ve built our reputation on understanding not just technology, but the 
+                                    people who use it. Our team doesn&apos;t just implement solutions – we partner 
                                     with our clients to transform their businesses through technology.
                                 </p>
                                 <p>
-                                    Whether you're a small business looking to optimize your IT infrastructure, 
+                                    Whether you&apos;re a small business looking to optimize your IT infrastructure, 
                                     a non-profit organization seeking to enhance your digital presence, 
-                                    or a large enterprise seeking digital transformation, we're here to help 
-                                    you succeed in an increasingly digital world."
+                                    or a large enterprise seeking digital transformation, we&apos;re here to help 
+                                    you succeed in an increasingly digital world.&quot;
                                 </p>
                                 <div className="pt-4 pr-10 float-right text-right">
                                     <div className="relative w-48 h-48 mb-4 mx-auto">
